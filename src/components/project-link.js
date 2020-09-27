@@ -5,13 +5,11 @@ import React from "react"
 
 const ProjectLink = ({ project }) => (
   <div>
-    <h3> {project.name} </h3>
-    <p> Description: {project.description} </p>
+    <h5> {project.name} </h5>
     <a href={project.html_url}> {project.html_url} </a>
-    <p>{project.updated_at}</p>
-    <p>{project.pushed_at}</p>
-    <p>{project.created_at}</p>
-    <p>{project.language}</p>
+    <br/>{project.description} <br/>
+    last updated: {project.updated_at}
+    <p>Made in: {project.language}</p>
   </div>
 )
 export default ProjectLink

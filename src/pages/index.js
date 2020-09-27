@@ -11,9 +11,9 @@ const IndexPage = () => (
     <SEO title="Home" />
 
     <Jumbotron fluid style={{ background: "white"}}>
-      <h1>Hello World!</h1>
+      <h1>Site under construction</h1>
 
-      Just some words to say 
+      but you are welcome to look around.
 
     </Jumbotron>
   </Layout>

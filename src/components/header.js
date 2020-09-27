@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
   <Navbar variant="dark" expand="sm" sticky="top" className="transparentNav">
     <div className="container my-1">
       <Navbar.Brand href="/">
-        <h3 style={{ margin: 0 }}>Juan S. Arboleda</h3>
+        <h4 style={{ margin: 0 }}>Juan S. Arboleda</h4>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

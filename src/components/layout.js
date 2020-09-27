@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         className="sticky-bottom footer"
       >
         <Container>
-          Alzeck © {new Date().getFullYear()}, Built with
+          Alzeck@github.com © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </Container>
