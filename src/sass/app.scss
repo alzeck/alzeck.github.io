@@ -1,0 +1,9 @@
+$dark: #000 !default;
+$border-radius: 10px !default;
+
+@import 'bootstrap/scss/bootstrap.scss';
+
+body {
+    background: $gray-100;
+}
+

@@ -595,3 +595,23 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+/* custom */
+.header{ 
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+}
+
+.header-group{
+  align-self: center;
+  margin-left: auto;
+}
+
+.header-link{
+  color:white;
+  margin-left: 10px;
+  text-decoration: none;
+}
