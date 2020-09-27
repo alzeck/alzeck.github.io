@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^2.6.36",
     "gatsby-remark-images": "^3.3.30",
     "gatsby-source-filesystem": "^2.3.30",
+    "gatsby-transformer-json": "^2.4.12",
     "gatsby-transformer-remark": "^2.8.35",
     "gatsby-transformer-sharp": "^2.5.15",
     "node-sass": "^4.14.1",
@@ -42,6 +43,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "update_projects": "curl https://api.github.com/users/alzeck/repos > ./src/data/projects.json",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public -b master"
   },

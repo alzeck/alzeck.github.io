@@ -4,25 +4,28 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function Template({
-	data, // this prop will be injected by the GraphQL query below.
+  data, // this prop will be injected by the GraphQL query below.
 }) {
-	const { markdownRemark } = data // data.markdownRemark holds your post data
-	const { frontmatter, html } = markdownRemark
-	return (
-		<Layout>
-			<SEO title={frontmatter.title} />
-			<div className="blog-post-container">
-				<div className="blog-post">
-					<h1>{frontmatter.title}</h1>
-					<h2>{frontmatter.date}</h2>
-					<div
-						className="blog-post-content"
-						dangerouslySetInnerHTML={{ __html: html }}
-					/>
-				</div>
-			</div>
-		</Layout>
-	)
+  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark
+  return (
+    <Layout>
+      <SEO title={frontmatter.title} />
+      <div className="blog-post-container">
+        <div className="blog-post">
+          <div className="d-flex flex-wrap">
+            <h3>{frontmatter.title}</h3>
+            <small className="text-muted ml-auto mt-auto">Posted on: {frontmatter.date}</small>
+          </div>
+          <hr className="mt-1" />
+          <div
+            className="blog-post-content mx-2"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
+      </div>
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -32,9 +35,9 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug
-				title
-				description
-				featuredImage{
+        title
+        description
+        featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid

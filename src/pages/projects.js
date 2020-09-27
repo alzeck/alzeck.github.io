@@ -1,16 +1,43 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import ProjectLink from "../components/project-link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const ProjectsPage = () => (
-  <Layout>
-    <SEO title="Projects" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
-
+const ProjectsPage = ({
+  data: {
+    allProjectsJson: { edges },
+  },
+}) => {
+  const Projects = edges
+    .filter(edge => edge.node.name !== "alzeck.github.io")
+    .map(edge => <ProjectLink project={edge.node} />)
+  return (
+    <Layout>
+      <SEO title="Projects" />
+      <h5>Take a look at some of my Open Source projects: </h5>
+      <hr className="mt-1" />
+      <div>{Projects}</div>
+    </Layout>
+  )
+}
 export default ProjectsPage
+
+
+export const pageQuery = graphql`
+  query {
+    allProjectsJson(sort: {order: ASC, fields: [name]}) {
+      edges {
+        node {
+          id
+          name
+          html_url
+          description
+          updated_at (formatString: "MMMM DD, YYYY")
+          pushed_at (formatString: "MMMM DD, YYYY")
+          created_at (formatString: "MMMM DD, YYYY")
+          language
+        }
+      }
+    }
+  }  
+`
