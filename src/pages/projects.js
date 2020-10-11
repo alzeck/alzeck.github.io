@@ -2,7 +2,7 @@ import React from "react"
 import ProjectLink from "../components/project-link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import CardDeck from "react-bootstrap/CardDeck"
 const ProjectsPage = ({
   data: {
     allProjectsJson: { edges },
@@ -16,7 +16,7 @@ const ProjectsPage = ({
       <SEO title="Projects" />
       <h5>Take a look at some of my Open Source projects: </h5>
       <hr className="mt-1" />
-      <div>{Projects}</div>
+      <CardDeck>{Projects}</CardDeck>
     </Layout>
   )
 }

@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Container className="mt-3 main">
+      <Container className="py-3 main border-left border-right bg-white">
         <main>{children}</main>
       </Container>
       <footer
