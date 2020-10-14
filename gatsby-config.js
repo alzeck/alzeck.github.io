@@ -39,6 +39,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-prismjs`
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
@@ -54,7 +57,9 @@ module.exports = {
       options: {
         path: `./src/data/`,
       },
-    }
+    },
+    
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
