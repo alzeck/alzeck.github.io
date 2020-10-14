@@ -41,7 +41,7 @@ featuredImage: ./distribution.png
         - Quantitative discrete: the variable can only assume isolated numbers
         - Quantitative continuous: the studied variable can take any value
 
-
+    ![example dataset](dataset.png)
 
     **Dataset**
     is defined as a collection of data, from an statistical point of view we could define it as the collection of data we gain from the observations of our population of interest. 
@@ -74,6 +74,7 @@ featuredImage: ./distribution.png
     - [Investopedia: Frequency distribution](https://www.investopedia.com/terms/f/frequencydistribution.asp)
 
 ## Applications / Practice (A)
+Complete projects for this assignments can be found at: https://github.com/AlZeck/statistcsApplicationHomeworks
 
 <!---
     1_A. Create - in both languages C# and VB.NET - a program which does the following simple tasks:
