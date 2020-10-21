@@ -2,7 +2,7 @@
 slug: "/research/statistics-assignment-2"
 date: "2020-10-21"
 title: "Statistics Assignment 2"
-description: "Assignment discussing classification of variables, data repositories, and generation of distrubtion using C#"
+description: "Assignment discussing classification of variables, data repositories, and generation of distribution using C#"
 featuredImage: ./hmw2_floating_pointCleve.png
 ---
 #### Researches about theory (R)
@@ -32,7 +32,7 @@ featuredImage: ./hmw2_floating_pointCleve.png
         - **Ratio:**
             Allows for a meaningful absolute value.
             
-            Is useful for measuring data like mass, lenght, duration, etc.
+            Is useful for measuring data like mass, length, duration, etc.
 
 
     *Sources:*
@@ -126,7 +126,7 @@ featuredImage: ./hmw2_floating_pointCleve.png
 
 5. **Continuous Variable Generator**
 
-    The following program creates a random distrbution of student's living distance from the university: 
+    The following program creates a random distribution of student's living distance from the university: 
 
     ![App](./hmw2_app2.jpg)
 
@@ -247,7 +247,7 @@ As shown the naive algorithm is 198897.8148 away from the actual average
 
     1. It can't properly handle small numbers, in fact $2^-149$ is the smallest number it can represent
 
-    2. Given a big number x this rapresentation wont be able to diferentiate x+1 from x.
+    2. Given a big number x this representation wont be able to differentiate x+1 from x.
 
     ![example](./hmw2_floating_pointCleve.png)
     <small>Distribution of numbers in a toy floating point system with only three bits for the exponent and mantissa - Cleve Moler</small>
