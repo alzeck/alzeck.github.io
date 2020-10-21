@@ -5,7 +5,7 @@ title: "Statistics Assignment 1"
 description: "Assignment discussing basic statistical notions, distributions and basics in VB.net and C#"
 featuredImage: ./distribution.png
 ---
-## Researches about theory (R)
+#### Researches about theory (R)
 <!---
     1_R. Describe the notion of statistical population. What is a population in Descriptive Statistics and what is a population in Inferential Statistics: point out the differences.
 -->
@@ -73,7 +73,7 @@ featuredImage: ./distribution.png
     - [Wikipedia: Frequency distribution](https://en.wikipedia.org/wiki/Frequency_distribution)
     - [Investopedia: Frequency distribution](https://www.investopedia.com/terms/f/frequencydistribution.asp)
 
-## Applications / Practice (A)
+#### Applications / Practice (A)
 Complete projects for this assignments can be found at: https://github.com/AlZeck/statistcsApplicationHomeworks
 
 <!---
@@ -293,7 +293,7 @@ Complete projects for this assignments can be found at: https://github.com/AlZec
     *Note: enable the allowDrop property for the element we are going to give the Drag & Drop functionality*
 
 
-## Researches about applications (RA)
+#### Researches about applications (RA)
 <!---
     1_RA. Observe carefully the different way C# and VB.NET deals with events and the different ways to define the event handlers. Discuss in your blog what differences you can spot. Which way do you find easier or more comfortable and why ?
 -->
