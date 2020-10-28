@@ -104,7 +104,7 @@ featuredImage: ./hmw3_streamgraph.png
 
     - **Kagi Chart**: Is a chart used for tracking price movements and to make decisions on purchasing stock. It differs from traditional stock charts by being mostly independent of time. This feature aids in producing a chart that reduces random noise.
 
-        ![Kagi Chart](hmw3_KagiChart.gif)
+        ![Kagi Chart](hmw3_KagiChart.png)
         <br/><small> By [Billw2](https://en.wikipedia.org/wiki/User:Billw2) at the [English language Wikipedia](https://en.wikipedia.org/wiki/),[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/),[Link](https://commons.wikimedia.org/w/index.php?curid=15107393) </small>
 
 
