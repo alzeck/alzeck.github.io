@@ -138,42 +138,42 @@ Provide alternative algorithms to minimize problems with the floating point repr
 
 6. **Problems with Naive Formula**
 
-```cs
-class Program
-    {
-        static float naive(float[] info)
+    ```cs
+    class Program
         {
-            float sum = 0.0f;
-            foreach (float elem in info)
+            static float naive(float[] info)
             {
-                sum += elem;
+                float sum = 0.0f;
+                foreach (float elem in info)
+                {
+                    sum += elem;
+                }
+                return sum / info.Length;
             }
-            return sum / info.Length;
-        }
-        static float knuth(float[] info)
-        {
-            float avg = 0.0f;
-            for (int i = 0; i < info.Length; i++)
+            static float knuth(float[] info)
             {
-                avg += ((float)info[i] - avg) / (i + 1);
+                float avg = 0.0f;
+                for (int i = 0; i < info.Length; i++)
+                {
+                    avg += ((float)info[i] - avg) / (i + 1);
+                }
+                return avg;
             }
-            return avg;
+
+            static void Main(string[] args)
+            {
+                float [] data = { ... };
+                // the array data contains 98 integers which 
+                // its avg = 634142998897.8148
+
+                Console.WriteLine(naive(data)); // 6.3414285E+11
+                Console.WriteLine(knuth(data)); // 6.3414305E+11
+            }
         }
+    ```
+    As shown the naive algorithm is 198897.8148 away from the actual average 
 
-        static void Main(string[] args)
-        {
-            float [] data = { ... };
-            // the array data contains 98 integers which 
-            // its avg = 634142998897.8148
-
-            Console.WriteLine(naive(data)); // 6.3414285E+11
-            Console.WriteLine(knuth(data)); // 6.3414305E+11
-        }
-    }
-```
-As shown the naive algorithm is 198897.8148 away from the actual average 
-
-[C# Project](https://github.com/AlZeck/statistcsApplicationHomeworks/tree/main/Homework_2/Task6NaiveFormulaProblems)
+    [C# Project](https://github.com/AlZeck/statistcsApplicationHomeworks/tree/main/Homework_2/Task6NaiveFormulaProblems)
 
     
 

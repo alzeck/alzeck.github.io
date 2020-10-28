@@ -46,13 +46,6 @@ module.exports = {
             }
           },
           {
-            resolve: "gatsby-remark-embed-video",
-            options: {
-              width: 800,
-              containerClass: 'embed-responsive embed-responsive-16by9'
-            }
-          },
-          {
             resolve: `gatsby-remark-prismjs`
           },
           {
