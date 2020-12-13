@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
       <Navbar.Brand href="/">
         <img alt={"Alzeck-Logo"} src={require("../images/logo_big.png")} height={"40px"}/>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className={"border-0"} />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link href="/projects"> Projects </Nav.Link>

@@ -27,10 +27,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Container className="py-3 main border-left border-right bg-white">
-        <main>{children}</main>
+      <Container>
+
+          {children}
+
       </Container>
-      <footer
+      {/*<footer
         className="sticky-bottom footer"
       >
         <Container>
@@ -38,7 +40,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </Container>
-      </footer>
+      </footer>*/}
     </>
   )
 }

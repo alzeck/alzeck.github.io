@@ -3,6 +3,8 @@ import ProjectLink from "../components/project-link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CardDeck from "react-bootstrap/CardDeck"
+import { graphql } from "gatsby"
+
 const ProjectsPage = ({
   data: {
     allProjectsJson: { edges },

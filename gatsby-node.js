@@ -40,3 +40,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      slug: String
+      date: Date @dateformat(formatString: "DD-MM-YYYY")
+      title: String
+      description: String
+      featuredImage: File
+    }
+  `
+  createTypes(typeDefs)
+}
