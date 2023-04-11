@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  class?: string;
+}
+
+const { class: c } = Astro.props;
+---
+
+<div class={c}>
+  <h1 class="text-4xl font-bold mb-4">
+    Hi I'm
+    <span class="text-green-500"> Juan Arboleda</span>
+  </h1>
+  <p class="text-2xl text-neutral-600 dark:text-neutral-300">
+    A software engineer from Colombia currently based in the UK, working at <a
+      href="https://www.sopost.com"
+      class="text-black dark:text-white hover:text-green-500 underline decoration-green-500"
+      >SoPost</a
+    > as a Solutions Engineer.
+  </p>
+  <p class="mt-4 text-2xl text-neutral-600 dark:text-neutral-300">
+    I'm passionate about Full stack development, Innovation, and Coffee-Driven
+    Development, currently a fan of Rust, Typescript and NextJS.
+  </p>
+  <div class="mt-4 flex gap-x-4 items-center">
+    <a href="https://www.github.com/alzeck">
+      <Icon
+        name="mdi:github"
+        class="h-9 aspect-square text-neutral-600 dark:text-neutral-300 hover:text-green-500"
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/juan-arboleda-polo-8305801ba/">
+      <Icon
+        name="mdi:linkedin"
+        class="h-10 aspect-square text-neutral-600 dark:text-neutral-300 hover:text-green-500"
+      />
+    </a>
+    <!-- <Icon
+      name="mdi:discord"
+      class="h-9 aspect-square text-neutral-600 dark:text-neutral-300 hover:text-green-500"
+    />
+    <Icon
+      name="mdi:twitch"
+      class="h-9 aspect-square text-neutral-600 dark:text-neutral-300 hover:text-green-500"
+    />
+    <Icon
+      name="mdi:twitter"
+      class="h-9 aspect-square text-neutral-600 dark:text-neutral-300 hover:text-green-500"
+    /> -->
+  </div>
+</div>

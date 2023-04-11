@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WelcomeCard from "../components/WelcomeCard.astro";
+
+// import Skills from "../components/Skills";
+---
+
+<Layout title="Home" class="overflow-y-auto snap-y snap-mandatory max-h-screen">
+  <WelcomeCard
+    class="flex min-h-screen flex-col justify-center scroll-m-0 snap-center snap-always py-6 mx-10 md:mx-auto max-w-screen-sm lg:max-w-screen-md"
+  />
+  <!-- <div
+    class="h-screen snap-center snap-always scroll-m-0 justify-center flex flex-col py-6 mx-6 md:mx-auto max-w-screen-md"
+  >
+    <Skills client:load />
+  </div> -->
+</Layout>
