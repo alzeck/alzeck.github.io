@@ -1,5 +1,8 @@
 {
   "files.watcherExclude": {
     "**/target": true
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-action.json": "file:///Users/4lzeck/Projects/alzeck.github.io/.github/workflows/deploy.yml"
   }
 }
