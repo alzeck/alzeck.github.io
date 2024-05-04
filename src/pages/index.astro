@@ -1,17 +1,37 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import WelcomeCard from "../components/WelcomeCard.astro";
-
-// import Skills from "../components/Skills";
+import { Icon } from "astro-icon/components";
+import Link from "../components/Link.astro";
 ---
 
-<Layout title="Home" class="overflow-y-auto snap-y snap-mandatory max-h-screen">
-  <WelcomeCard
-    class="flex min-h-screen flex-col justify-center scroll-m-0 snap-center snap-always py-6 mx-10 md:mx-auto max-w-screen-sm lg:max-w-screen-md"
-  />
-  <!-- <div
-    class="h-screen snap-center snap-always scroll-m-0 justify-center flex flex-col py-6 mx-6 md:mx-auto max-w-screen-md"
-  >
-    <Skills client:load />
-  </div> -->
+<Layout title="Home">
+   <h1 class="text-lg font-semibold text-accent">
+      Hi I'm
+      <span class="text-primary"> Juan Arboleda</span>
+    </h1>
+    <p>
+      A senior software engineer from Colombia currently based in the UK,
+      working at <Link
+        href="https://www.sopost.com"
+        label="SoPost"
+      />.
+    </p>
+    <p >
+      I'm passionate about Full stack development, Innovation, and Coffee-Driven
+      Development, currently in love with Rust, Typescript and NextJS.
+    </p>
+    <div class="mt-4 flex items-center gap-x-4 text-3xl">
+      <a href="https://www.github.com/alzeck">
+        <Icon
+          name="mdi:github"
+          class="text-neutral-600 hover:text-green-500 dark:text-neutral-300"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/juan-arboleda-polo-8305801ba/">
+        <Icon
+          name="mdi:linkedin"
+          class="text-neutral-600 hover:text-green-500 dark:text-neutral-300"
+        />
+      </a>
+   </div>
 </Layout>

@@ -1,4 +1,4 @@
-import { JSXElement, For } from "solid-js";
+import { type JSXElement, For } from "solid-js";
 
 const skills = [
   {
@@ -71,14 +71,14 @@ const skills = [
 export default function Skills(): JSXElement {
   return (
     <div class="">
-      <h1 class="text-4xl mb-4">Skills</h1>
+      <h1 class="mb-4 text-4xl">Skills</h1>
       <div class="grid grid-cols-3 gap-6">
         <For each={skills}>
           {(skill) => (
             <div>
               <h2 class="text-xl">{skill.name}</h2>
-              <div class="bg-neutral-200/10 h-8 rounded-md relative -z-10">
-                <div class="absolute inset-0 flex justify-center items-center">
+              <div class="relative -z-10 h-8 rounded-md bg-neutral-200/10">
+                <div class="absolute inset-0 flex items-center justify-center">
                   {skill.text}
                 </div>
                 <div
