@@ -3,6 +3,7 @@ import "../styles/base.css";
 import Navbar from "../components/Navbar.astro";
 import "@fontsource/geist-mono";
 import "@fontsource/geist-sans";
+import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -14,17 +15,20 @@ const { title, class: mainClass, noNavbar } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset=" UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>alzeck - {title}</title>
+    <ClientRouter />
   </head>
-  <body class="dark bg-background font-mono text-foreground">
+  <body
+    class="bg-background text-foreground mx-auto max-w-3xl px-10 py-4 font-mono text-sm *:text-pretty"
+  >
     {!noNavbar && <Navbar />}
-    <main class:list={["mx-10 mt-20 max-w-screen-sm space-y-4 py-6 md:mx-auto lg:max-w-screen-md", mainClass]}>
+    <main class:list={["space-y-4 py-10", mainClass]}>
       <slot />
     </main>
   </body>

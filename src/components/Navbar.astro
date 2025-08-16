@@ -1,34 +1,26 @@
 ---
 const currentPath = Astro.url.pathname;
 const routes = [
-  { path: "/", name: "home" },
+  // { path: "/", name: "home" },
   { path: "/projects", name: "projects" },
   { path: "/blog", name: "blog" },
 ];
 ---
 
 <div
-  class="fixed inset-x-0 top-0 z-10 bg-background/75 py-3 backdrop-blur-lg sm:py-5"
+  class="bg-background/75 border-muted inset-x-0 top-0 z-10 backdrop-blur-lg"
 >
-  <div
-    class="mx-10 flex max-w-screen-sm items-center justify-between
-    gap-2 text-lg md:mx-auto lg:max-w-screen-md"
-  >
-    <div class="flex justify-center text-2xl sm:justify-start ">
-      <a class="font-medium text-logo hover:text-accent" href="/"> alzeck </a>
+  <div class="text-md flex items-center justify-between gap-2 sm:flex-row">
+    <div class="flex justify-center text-xl sm:justify-start">
+      <a class="text-logo hover:text-accent font-medium" href="/"> alzeck </a>
     </div>
 
-    <nav
-      class="grid grid-cols-3 leading-none sm:col-span-2 sm:w-fit lg:col-span-1"
-    >
+    <nav class="grid grid-cols-2">
       {
         routes.map(({ path, name }) => (
           <a
-            class:list={{
-              "flex items-center justify-center rounded p-2": true,
-              "text-muted hover:text-accent": currentPath !== path,
-              "text-primary underline underline-offset-4": currentPath === path,
-            }}
+            class="data-[active=false]:text-muted data-[active=false]:hover:text-accent data-[active=true]:text-primary flex items-center justify-center p-2"
+            data-active={currentPath.includes(path)}
             href={path}
           >
             {name}

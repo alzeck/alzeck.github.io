@@ -1,24 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// import Link from "../components/Link.astro"
-// const projects = [
-//   {
-//     title: "pouring.at",
-//     href: "https://pouring.at",
-//     description: "",
-//   },
-// ];
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
 ---
 
 <Layout title="Projects">
-   <h1 class="text-xl font-bold text-primary">Coming soon</h1>
-  <!-- <ul class="list-disc"> -->
-  <!-- {projects.map((p) => ( -->
-  <!--   <li> -->
-  <!--     <Link label={p.title} href={p.href} /> -->
-  <!--     <p class="text-sm mt-2 text-muted" >{p.description}</p>  -->
-  <!--   </li> -->
-  <!-- ))} -->
-  <!---->
-  <!-- </ul> -->
+  <ul class="space-y-4">
+    {
+      projects.length === 0 ? (
+        <li class="text-muted">Coming soon</li>
+      ) : (
+        projects.map((p) => (
+          <li class="border-muted group border-dashed pb-4 not-last:border-b">
+            <a href={p.data.url} target="_blank" rel="noopener noreferrer">
+              <div class="group-hover:text-primary font-semibold">
+                {p.data.title}
+              </div>
+
+              <div class="text-muted group-hover:text-foreground mt-2 text-sm text-pretty">
+                {p.data.description}
+              </div>
+            </a>
+          </li>
+        ))
+      )
+    }
+  </ul>
 </Layout>

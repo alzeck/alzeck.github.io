@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import slug from "slug";
+import Link from "../../components/Link.astro";
+
+export const getStaticPaths = async () => {
+  const allBlogPosts = await getCollection("blog");
+  const paths = allBlogPosts.map((post) => ({
+    params: { path: slug(post.data.title) },
+  }));
+  return [{ params: { path: "/" } }, ...paths];
+};
+const { path } = Astro.params;
+
+const allBlogPosts = await getCollection("blog");
+const blogPost = allBlogPosts.find((post) => slug(post.data.title) === path);
+
+if (path && !blogPost) return Astro.redirect("/404");
+
+const content = blogPost ? await render(blogPost) : null;
+---
+
+<Layout title={blogPost ? `Blog - ${blogPost.data.title}` : "Blog"}>
+  {
+    blogPost && content ? (
+      <article>
+        <div class="prose prose-sm prose-neutral dark:prose-invert mx-auto max-w-full text-pretty">
+          <sm>
+            {blogPost.data.pubDate.toISOString().replace(/T.*$/, "")} - Juan
+            Arboleda
+          </sm>
+          <h1 class="text-primary">{blogPost.data.title}</h1>
+          <content.Content />
+        </div>
+      </article>
+    ) : (
+      <ul class="space-y-4">
+        {allBlogPosts.length === 0 ? (
+          <li class="text-muted">Coming soon</li>
+        ) : (
+          allBlogPosts.map((post) => (
+            <li class="border-muted group border-dashed pb-4 not-last:border-b">
+              <a href={`/blog/${slug(post.data.title)}`}>
+                <div class="group-hover:text-primary font-semibold">
+                  {post.data.title}
+                </div>
+
+                <div class="text-muted group-hover:text-foreground mt-2 text-sm text-pretty">
+                  {post.data.description}
+                </div>
+              </a>
+            </li>
+          ))
+        )}
+      </ul>
+    )
+  }
+</Layout>

@@ -1,21 +1,39 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-logo: var(--logo);
+
+  --font-sans:
+    Geist Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    Geist Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
 
 @layer base {
   :root {
-    --background: #fafafa;
-    --foreground: #525252;
-    --primary: #22c55e;
-    --accent: #000;
-    --muted: #a3a3a3;
-    --logo: #737373;
+    --background: theme(--color-neutral-50); /* #fafafa; */
+    --foreground: theme(--color-neutral-600); /* #525252; */
+    --primary: theme(--color-green-500);
+    --accent: theme(--color-black); /*  #000; */
+    --muted: theme(--color-neutral-400); /* #a3a3a3; */
+    --logo: theme(--color-neutral-500); /* #737373; */
   }
   .dark {
-    --background: #171717;
-    --foreground: #d4d4d4;
-    --accent: #fff;
-    --muted: #737373;
-    --logo: #a3a3a3;
+    --background: theme(--color-neutral-950);
+    --foreground: theme(--color-neutral-300); /* #d4d4d4; */
+    --primary: theme(--color-green-500); /* #22c55e; */
+    --accent: theme(--color-white); /* #fff; */
+    --muted: theme(--color-neutral-500); /* #737373; */
+    --logo: theme(--color-neutral-400); /*  #a3a3a3; */
   }
 }

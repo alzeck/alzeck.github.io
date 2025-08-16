@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Logo from "../components/Logo.astro";
 ---
 
 <Layout
@@ -9,10 +8,8 @@ import Logo from "../components/Logo.astro";
   class="flex h-screen items-center justify-center"
 >
   <a href="/">
-    <Logo class="h-20 text-black dark:text-white" />
-    <h1
-      class="mt-4 text-center text-2xl font-bold text-neutral-600 dark:text-neutral-400 sm:text-3xl"
-    >
+    <div class="text-logo hover:text-accent font-medium">alzeck</div>
+    <h1 class="text-muted my-4 text-center font-bold">
       <span class="text-red-500">404</span> - Not found
     </h1>
   </a>
